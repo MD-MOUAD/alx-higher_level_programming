@@ -6,7 +6,6 @@
 class Square(object):
     ''' square class with size attribute and constructor '''
     def __init__(self, size=0):
-        self.__size = size
         if type(size) is not int:
             raise TypeError("size must be an integer")
         if size < 0:
@@ -26,4 +25,4 @@ class Square(object):
             raise TypeError('size must be an integer')
         if value < 0:
             raise ValueError('size must be >= 0')
-        self.__size = size
+        self.__size = value
