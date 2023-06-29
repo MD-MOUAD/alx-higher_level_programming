@@ -4,5 +4,5 @@
 
 
 class Square(object):
-    '''an empty class that defines a square '''
+    ''' An empty class that defines a square '''
     pass
