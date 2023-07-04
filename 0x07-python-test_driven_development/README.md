@@ -11,6 +11,7 @@ Code that is not tested can’t be trusted
 * “A Tested Software is Bug-Free”: No one can claim with absolute certainty that a software application is 100% bug-free even if a tester with superb testing skills has tested the application.
 * “Testers are Responsible for Quality of Product”: It is a very common misinterpretation that only testers or the testing team should be responsible for product quality. Testers’ responsibilities include the identification of bugs to the stakeholders and then it is their decision whether they will fix the bug or release the software. Releasing the software at the time puts more pressure on the testers, as they will be blamed for any error.
 * “Test Automation should be used wherever possible to Reduce Time”: Yes, it is true that Test Automation reduces the testing time, but it is not possible to start test automation at any time during software development. Test automaton should be started when the software has been manually tested and is stable to some extent. Moreover, test automation can never be used if requirements keep changing.
+
 ## Basic
 This standard deals with the following aspects to determine the quality of a software application:
 
@@ -26,6 +27,7 @@ This standard presents some set of quality attributes for any software such as:
 * Efficiency
 * Maintainability
 * Portability
+
 ## Functional Testing
 This is a type of black-box testing that is based on the specifications of the software that is to be tested. The application is tested by providing input and then the results are examined that need to conform to the functionality it was intended for. Functional testing of a software is conducted on a complete, integrated system to evaluate the system’s compliance with its specified requirements.
 
@@ -36,6 +38,7 @@ There are five steps that are involved while testing an application for function
 * The output based on the test data and the specifications of the application.
 * The writing of test scenarios and the execution of test cases.
 * The comparison of actual and expected results based on the executed test cases.
+
 An effective testing practice will see the above steps applied to the testing policies of every organization and hence it will make sure that the organization maintains the strictest of standards when it comes to software quality.
 
 ## Unit Testing
@@ -46,12 +49,15 @@ The goal of unit testing is to isolate each part of the program and show that in
 Limitations of Unit Testing:
 
 * Testing cannot catch each and every bug in an application. It is impossible to evaluate every execution path in every software application. The same is the case with unit testing.
-* There is a limit to the number of scenarios and test data that a developer can use to verify a source code. After having exhausted all the options, there is no choice but to stop unit testing and merge the code segment with other units.
+* There is a limit to the number of scenarios and test data that a developer can use to verify a source code. 
+
+After having exhausted all the options, there is no choice but to stop unit testing and merge the code segment with other units.
 ## Integration Testing
 Integration testing is defined as the testing of combined parts of an application to determine if they function correctly. Integration testing can be done in two ways: Bottom-up integration testing and Top-down integration testing.
 
 * Bottom-up integration: This testing begins with unit testing, followed by tests of progressively higher-level combinations of units called modules or builds.
 * Top-down integration: In this testing, the highest-level modules are tested first and progressively, lower-level modules are tested thereafter.
+
 In a comprehensive software development environment, bottom-up testing is usually done first, followed by top-down testing. The process concludes with multiple tests of the complete application, preferably in scenarios designed to mimic actual situations.
 
 ## System Testing
@@ -63,6 +69,7 @@ System testing is important because of the following reasons:
 * The application is tested thoroughly to verify that it meets the functional and technical specifications.
 * The application is tested in an environment that is very close to the production environment where the application will be deployed.
 * System testing enables us to test, verify, and validate both the business requirements as well as the application architecture.
+
 ## Regression Testing
 Whenever a change in a software application is made, it is quite possible that other areas within the application have been affected by this change. Regression testing is performed to verify that a fixed bug hasn’t resulted in another functionality or business rule violation. The intent of regression testing is to ensure that a change, such as a bug fix should not result in another fault being uncovered in the application.
 
@@ -73,6 +80,7 @@ Regression testing is important because of the following reasons:
 * Mitigates risks when regression testing is performed on the application.
 * Test coverage is increased without compromising timelines.
 * Increase speed to market the product.
+
 ## Acceptance Testing
 This is arguably the most important type of testing, as it is conducted by the Quality Assurance Team who will gauge whether the application meets the intended specifications and satisfies the client’s requirement. The QA team will have a set of pre-written scenarios and test cases that will be used to test the application.
 
@@ -87,6 +95,7 @@ This test is the first stage of testing and will be performed amongst the teams 
 * Broken Links
 * Cloudy Directions
 * The Application will be tested on machines with the lowest specification to test loading times and any latency problems.
+
 ## Beta Testing
 This test is performed after alpha testing has been successfully performed. In beta testing, a sample of the intended audience tests the application. Beta testing is also known as pre-release testing. Beta test versions of software are ideally distributed to a wide audience on the Web, partly to give the program a “real-world” test and partly to provide a preview of the next release. In this phase, the audience will be testing the following:
 
@@ -95,6 +104,7 @@ This test is performed after alpha testing has been successfully performed. In b
 * Getting the feedback, the project team can fix the problems before releasing the software to the actual users.
 * The more issues you fix that solve real user problems, the higher the quality of your application will be.
 * Having a higher-quality application when you release it to the general public will increase customer satisfaction.
+
 ## Non-Functional Testing
 This section is based upon testing an application from its non-functional attributes. Non-functional testing involves testing a software from the requirements which are nonfunctional in nature but important such as performance, security, user interface, etc.
 
@@ -114,6 +124,7 @@ Performance testing is considered as one of the important and mandatory testing 
 * Capacity
 * Stability
 * Scalability
+
 Performance testing can be either qualitative or quantitative and can be divided into different sub-types such as Load testing and Stress testing.
 
 ### Load Testing
@@ -131,6 +142,7 @@ The aim of stress testing is to test the software by applying the load to the sy
 * Shutdown or restart of network ports randomly
 * Turning the database on or off
 * Running different processes that consume resources such as CPU, memory, server, etc.
+
 ## Usability Testing
 Usability testing is a black-box technique and is used to identify any error(s) and improvements in the software by observing the users through their usage and operation.
 
@@ -172,12 +184,14 @@ Portability testing includes testing a software with the aim to ensure its reusa
 
 * Transferring an installed software from one computer to another.
 * Building executable (.exe) to run the software on different platforms.
+
 Portability testing can be considered as one of the sub-parts of system testing, as this testing type includes overall testing of a software with respect to its usage over different environments. Computer hardware, operating systems, and browsers are the major focus of portability testing. Some of the pre-conditions for portability testing are as follows:
 
 * Software should be designed and coded, keeping in mind the portability requirements.
 * Unit testing has been performed on the associated components.
 * Integration testing has been performed.
 * Test environment has been established.
+
 ## Test Plan
 A test plan outlines the strategy that will be used to test an application, the resources that will be used, the test environment in which testing will be performed, and the limitations of the testing and the schedule of testing activities. Typically the Quality Assurance Team Lead will be responsible for writing a Test Plan.
 
@@ -192,6 +206,7 @@ A test plan includes the following:
 * The resources allocated for testing the application
 * Any risks involved during the testing process
 * A schedule of tasks and milestones to be achieved
+
 ## Test Scenario
 It is a one line statement that notifies what area in the application will be tested. Test scenarios are used to ensure that all process flows are tested from end to end. A particular area of an application can have as little as one test scenario to a few hundred scenarios depending on the magnitude and complexity of the application.
 
@@ -213,4 +228,5 @@ Furthermore, test cases are written to keep track of the testing coverage of a s
 * Expected outcome
 * Actual outcome
 * Post-conditions
+
 Many test cases can be derived from a single test scenario. In addition, sometimes multiple test cases are written for a single software which are collectively known as test suites.
