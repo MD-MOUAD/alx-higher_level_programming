@@ -1,2 +1,3 @@
 #!/usr/bin/python3
-print("Hello alx")
+def magic_calculation(a, b):
+    return 98 + a ** b
