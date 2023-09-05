@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+This module defines the Rectangle class for representing
+rectangles with width and height attributes.
+"""
 
 
 class Rectangle:
@@ -22,9 +26,6 @@ class Rectangle:
 
     @property
     def width(self):
-        """
-        int: The width of the rectangle.
-        """
         return self.__width
 
     @width.setter
