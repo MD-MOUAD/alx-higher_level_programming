@@ -130,12 +130,12 @@ class Rectangle:
         h = self.__height
         return f"Rectangle({w}, {h})"
 
-    @staticmethod
-    def __del__(self):
+    @classmethod
+    def __del__(cls):
         """
         Prints Bye rectangle... when an instance of Rectangle
         is deleted.
 
         """
-        self.number_of_instances -= 1
+        cls.number_of_instances -= 1
         print("Bye rectangle...")
