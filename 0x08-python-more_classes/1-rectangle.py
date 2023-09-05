@@ -40,6 +40,7 @@ class Rectangle:
             value (int): The new width value.
 
         Raises:
+            TypeError: If the value is not integer
             ValueError: If the value is negative.
         """
         if type(value) is not int:
@@ -64,6 +65,7 @@ class Rectangle:
             value (int): The new height value.
 
         Raises:
+            TypeError: If the value is not integer
             ValueError: If the value is negative.
         """
         if type(value) is not int:
