@@ -131,7 +131,7 @@ class Rectangle:
         return f"Rectangle({w}, {h})"
 
     @staticmethod
-    def __del__():
+    def __del__(self):
         """
         Prints Bye rectangle... when an instance of Rectangle
         is deleted.
