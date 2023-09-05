@@ -114,7 +114,7 @@ class Rectangle:
                     rep += "\n"
             return rep
 
-    def __str__(self):
+    def __repr__(self):
         """
         Allows use of eval().
 
