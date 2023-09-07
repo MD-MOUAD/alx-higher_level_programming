@@ -51,6 +51,14 @@ Now test it:
     Traceback (most recent call last):
     TypeError: ...
 
+    >>> print(lazy_matrix_mul([[9, 4], [2]], [[1, 2], [4, 9]])) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+
+    >>> print(lazy_matrix_mul([[9, 4], [2, 7.0]], [[1], [4, 9]])) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+
     >>> print(lazy_matrix_mul([[9, 4, 4], [2, 8, 2]], [[1, 2], [4, 9]])) # doctest: +ELLIPSIS
     Traceback (most recent call last):
     ValueError: ...
