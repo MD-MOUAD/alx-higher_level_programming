@@ -63,6 +63,6 @@ Now test it:
     Traceback (most recent call last):
     TypeError: lazy_matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
 
-    >>> print(lazy_matrix_mul([["hello"]], [[1, 2]])) # doctest: +ELLIPSIS
+    >>> print(lazy_matrix_mul([["hello"]], [[1, 2]]))
     Traceback (most recent call last):
-    TypeErrorsss: ...
+    TypeError: invalid data type for einsum
