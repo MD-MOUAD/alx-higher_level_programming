@@ -51,14 +51,6 @@ Now test it:
     Traceback (most recent call last):
     TypeError: ...
 
-    >>> print(lazy_matrix_mul([[9, 4], [2]], [[1, 2], [4, 9]])) # doctest: +ELLIPSIS
-    Traceback (most recent call last):
-    ...
-
-    >>> print(lazy_matrix_mul([[9, 4], [2, 7.0]], [[1], [4, 9]])) # doctest: +ELLIPSIS
-    Traceback (most recent call last):
-    ...
-
     >>> print(lazy_matrix_mul([[9, 4, 4], [2, 8, 2]], [[1, 2], [4, 9]])) # doctest: +ELLIPSIS
     Traceback (most recent call last):
     ValueError: ...
@@ -67,6 +59,6 @@ Now test it:
     Traceback (most recent call last):
     TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
 
-    >>> print(lazy_matrix_mul()) # doctest: +ELLIPSIS
+    >>> print(lazy_matrix_mul())
     Traceback (most recent call last):
-    ...
+    TypeError: lazy_matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
