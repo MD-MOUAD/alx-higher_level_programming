@@ -39,13 +39,13 @@ def matrix_mul(m_a, m_b):
     for row in m_a:
         set_of_lens.add(len(row))
     if len(set_of_lens) != 1:
-        raise TypeError("each row of m_a must should be of the same size")
+        raise TypeError("each row of m_a must be of the same size")
 
     set_of_lens = set([])
     for row in m_b:
         set_of_lens.add(len(row))
     if len(set_of_lens) != 1:
-        raise TypeError("each row of m_b must should be of the same size")
+        raise TypeError("each row of m_b must be of the same size")
 
     a_col = len(m_a[0])
     b_row = len(m_b)
