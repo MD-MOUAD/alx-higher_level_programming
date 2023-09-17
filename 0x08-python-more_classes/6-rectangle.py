@@ -27,7 +27,7 @@ class Rectangle:
         """
         self.width = width
         self.height = height
-        type(self).number_of_instances += 1
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -131,12 +131,11 @@ class Rectangle:
         h = self.__height
         return f"Rectangle({w}, {h})"
 
-    @classmethod
-    def __del__(cls):
+    def __del__(self):
         """
         Prints Bye rectangle... when an instance of Rectangle
         is deleted.
 
         """
-        cls.number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
