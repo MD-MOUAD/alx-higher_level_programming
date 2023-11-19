@@ -10,7 +10,7 @@ if __name__ == "__main__":
     curs = conn.cursor()
 
     query = "SELECT * FROM `states`\
-        WHERE `name` LIKE 'N%' ORDER BY id ASC"
+        WHERE `name` LIKE BINARY 'N%' ORDER BY id ASC"
     curs.execute(query)
     query_rows = curs.fetchall()
     for row in query_rows:
