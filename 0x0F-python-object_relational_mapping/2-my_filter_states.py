@@ -9,8 +9,8 @@ if __name__ == "__main__":
 
     curs = conn.cursor()
 
-    query = f"SELECT * FROM `states`\
-        WHERE `name` LIKE BINARY '{argv[4]}' ORDER BY id ASC"
+    query = "SELECT * FROM `states`\
+        WHERE `name` LIKE BINARY '{}' ORDER BY id ASC".format(argv[4])
     curs.execute(query)
     query_rows = curs.fetchall()
     for row in query_rows:
