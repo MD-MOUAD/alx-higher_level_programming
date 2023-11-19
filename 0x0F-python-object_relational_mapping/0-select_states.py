@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Module for states"""
 import MySQLdb
 from sys import argv
 
