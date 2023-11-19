@@ -9,7 +9,7 @@ if __name__ == "__main__":
 
     curs = conn.cursor()
 
-    query = "SELECT `id`, `name` AS 'city'FROM `states`\
+    query = "SELECT * FROM `states`\
         WHERE `name` LIKE 'N%' ORDER BY id ASC"
     curs.execute(query)
     query_rows = curs.fetchall()
