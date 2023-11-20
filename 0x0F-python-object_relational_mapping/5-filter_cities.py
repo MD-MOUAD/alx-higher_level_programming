@@ -16,12 +16,7 @@ if __name__ == "__main__":
         ORDER BY cities.id ASC"
     curs.execute(query, (argv[4],))
     query_rows = curs.fetchall()
-    delim = ", "
-    cpt = 0;
     for row in query_rows:
-        cpt += 1
-        if cpt == len(query_rows):
-            delim = "\n"
-        print(row[0], end=delim)
+        print(row)
     curs.close()
     conn.close()
