@@ -16,7 +16,9 @@ if __name__ == "__main__":
         ORDER BY cities.id ASC"
     curs.execute(query, (argv[4],))
     query_rows = curs.fetchall()
+    filtred_cities = ()
     for row in query_rows:
-        print(row)
+        filtred_cities += row
+    print(*filtred_cities, sep=", ", end="\n")
     curs.close()
     conn.close()
