@@ -24,9 +24,9 @@ INSERT INTO cities (state_id, name) VALUES (4, "New York");
 INSERT INTO cities (state_id, name) VALUES (5, "Las Vegas"), (5, "Reno"), (5, "Henderson"), (5, "Carson City");
 
 -- @block
-SELECT cities.id, cities.name, states.name
+SELECT cities.name
 FROM `cities` INNER JOIN `states` ON cities.state_id = states.id
-ORDER BY cities.id
+WHERE states.name LIKE BINARY 'Texas' ORDER BY cities.id ASC;
 -- @block
 -- Create states table in hbtn_0e_4_usa with some data
 CREATE DATABASE IF NOT EXISTS hbtn_0e_4_usa;
