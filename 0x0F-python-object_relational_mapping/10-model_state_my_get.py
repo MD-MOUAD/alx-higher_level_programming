@@ -16,11 +16,10 @@ if __name__ == "__main__":
     session = Session()
 
     # lists first State object from the database hbtn_0e_6_usa
-    filtered_states = session.query(State).filter(
-        State.name.like("%a%")
-    ).order_by(State.id)
+    state = session.query(State).filter(
+        State.name == argv[4]
+    ).order_by(State.id).first()
 
-    for state in filtered_states:
-        print(f"{state.id}: {state.name}")
+    print(state.id) if state else print("Not found")
 
     session.close()
