@@ -15,15 +15,11 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    # add State object “Louisiana” to the database hbtn_0e_6_usa
-    new_state = State(name="Louisiana")
-    session.add(new_state)
+    # lists first State object from the database hbtn_0e_6_usa
+    state = session.query(State).filter(
+        State.name == argv[4]
+    ).order_by(State.id).first()
 
-    # commit new changes
-    session.commit()
+    print(state.id) if state else print("Not found")
 
-    # print new state id
-    print(new_state.id)
-
-    # close session
     session.close()
