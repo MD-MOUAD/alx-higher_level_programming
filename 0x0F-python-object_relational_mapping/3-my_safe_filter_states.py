@@ -12,7 +12,7 @@ if __name__ == "__main__":
     query = "SELECT * FROM `states`\
         WHERE `name` LIKE BINARY %s ORDER BY id ASC"
     state_name = argv[4]
-    curs.execute(query, state_name)
+    curs.execute(query, (state_name,))
     query_rows = curs.fetchall()
     for row in query_rows:
         print(row)
