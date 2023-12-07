@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-#!/usr/bin/python3
 """list first records in states table
 """
 from sys import argv
@@ -18,6 +17,7 @@ if __name__ == "__main__":
 
     # lists first State object from the database hbtn_0e_6_usa
     first = session.query(State).order_by(State.id).first()
-    print(f"{first.id}: {first.name}") if first else None
+    if first:
+        print(f"{first.id}: {first.name}")
 
     session.close()
