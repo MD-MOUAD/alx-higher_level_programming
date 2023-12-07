@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""satate model"""
 from sqlalchemy import (Column, String, Integer)
 from sqlalchemy.orm import declarative_base
 Base = declarative_base()
