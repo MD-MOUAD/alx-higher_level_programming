@@ -16,5 +16,5 @@ if __name__ == "__main__":
     session = Session()
     all_cities = session.query(City).order_by(City.id).all()
     for c in all_cities:
-        print(f"{c.id}: {c.name} -> {c.state.name}") # backref=state
+        print(f"{c.id}: {c.name} -> {c.state.name}")  # backref=state
     session.close()
