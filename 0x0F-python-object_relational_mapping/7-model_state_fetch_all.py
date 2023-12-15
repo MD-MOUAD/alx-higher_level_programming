@@ -8,7 +8,7 @@ from sqlalchemy.orm import Session
 
 if __name__ == "__main__":
     # database URL
-    db_url = f"mysql://{argv[1]}:{argv[2]}@localhost/{argv[3]}"
+    db_url = f"mysql://{argv[1]}:{argv[2]}@localhost:3306/{argv[3]}"
     # create engine
     engine = create_engine(db_url)
 
