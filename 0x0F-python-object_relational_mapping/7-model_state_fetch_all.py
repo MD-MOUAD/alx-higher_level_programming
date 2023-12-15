@@ -6,6 +6,7 @@ from model_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 
+
 def main():
     # database URL
     db_url = f"mysql://{argv[1]}:{argv[2]}@localhost:3306/{argv[3]}"
@@ -19,5 +20,6 @@ def main():
     for state in all_states:
         print(f"{state.id}: {state.name}")
 
+
 if __name__ == "__main__":
-	main()
+    main()
