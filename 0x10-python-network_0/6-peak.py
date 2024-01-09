@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """ module doc """
+
+
 def find_peak(list_of_integers):
     """ function doc """
     if list_of_integers:
