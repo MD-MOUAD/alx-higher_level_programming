@@ -1,3 +1,3 @@
 #!/bin/bash
-# cURL b0dy siz3
-curl -s $1 | wc -c
+# CURL body size
+curl -s $1 | grep 'Content-Length:' | awk '{print$2}'
