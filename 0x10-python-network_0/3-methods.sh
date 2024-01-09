@@ -1,3 +1,3 @@
 #!/bin/bash
 # cURL only methods"
-#curl -sI  "$1" | sed -n '/Allow: /s/Allow: //p'
+curl -s -X OPTIONS 0.0.0.0:5000/route_4; echo ""
