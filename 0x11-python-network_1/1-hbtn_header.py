@@ -5,5 +5,4 @@ from sys import argv
 
 if __name__ == '__main__':
     with urlopen(argv[1]) as response:
-        header = response.headers  # headers atribute or info() method
-    print(header["X-Request-Id"])
+        print(response.headers["X-Request-Id"])
