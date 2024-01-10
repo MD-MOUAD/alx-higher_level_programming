@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 from urllib.request import urlopen
-"""What's my status?"""
+""" module doc """
 
 if __name__ == '__main__':
     with urlopen('https://alx-intranet.hbtn.io/status') as response:
