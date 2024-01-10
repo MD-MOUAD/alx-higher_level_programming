@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 """ module doc """
 import requests
-import sys
+from sys import argv
 
 if __name__ == "__main__":
-    url = sys.argv[1]
-    res = requests.get(url)
-    if (res.status_code >= 400):
-        print(f"Error code: {res.status_code}")
-        exit()
-    print(res.text)
+    response = requests.get(url=argv[1])
+    if response.status_code >= 400:
+        print(f"Error code: {response.status_code}")
+    else:
+        print(response.text)
