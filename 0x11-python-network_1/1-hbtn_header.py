@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-""" module doc """
-import urllib.request
-import sys
+from urllib.request import urlopen
+from sys import argv
+"""Response header value"""
 
-if __name__ == "__main__":
-    url = sys.argv[1]
-    with urllib.request.urlopen(url) as response:
-        print(response.info()["X-Request-Id"])
+if __name__ == '__main__':
+    with urlopen(argv[1]) as response:
+        header = response.headers  # headers atribute or info() method
+    print(header["X-Request-Id"])
