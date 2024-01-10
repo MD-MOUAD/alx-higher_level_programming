@@ -1,12 +1,7 @@
 #!/usr/bin/python3
-""" module doc """
+"""module doc"""
 import requests
 
-
-if __name__ == "__main__":
-    url = "https://alx-intranet.hbtn.io/status"
-    res = requests.get(url)
-    data = res.text
-    resType = type(data)
-    print(f"Body response:\n\t- type: {resType}\n\t\
-- content: {data}")
+response = requests.get('https://alx-intranet.hbtn.io/status')
+print("Body response:")
+print(f"\t- type: {type(response.text)}\n\t- content: {response.text}")
