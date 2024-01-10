@@ -1,21 +1,19 @@
 #!/usr/bin/python3
 """ module doc """
 import requests
-import sys
+from sys import argv
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1:
-        q = sys.argv[1]
-    else:
-        q = ""
-    url = "http://0.0.0.0:5000/search_user"
-    params = {"q": q}
-    res = requests.post(url, data=params)
+    url = 'http://0.0.0.0:5000/search_user'
+    q = argv[1] if len(argv) > 1 else ''
+    parameters = {'q': q}
+    response = requests.post(url, data=parameters)
     try:
-        resjson = res.json()
-        if resjson:
-            print(f'[{resjson["id"]}] {resjson["name"]}')
+        json_response = response.json()
+        if len(json_response) == 0:
+            print('No result')
         else:
-            print("No result")
+            id, name = json_response['id'], json_response['name']
+            print(f'[{id}] {name}')
     except Exception:
-        print("Not a valid JSON")
+        print('Not a valid JSON')
