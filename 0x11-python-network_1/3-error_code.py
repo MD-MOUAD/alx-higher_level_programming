@@ -1,12 +1,14 @@
 #!/usr/bin/python3
-""" module doc """
-import urllib.request
-import sys
+"""module doc"""
+from urllib.request import urlopen
+from urllib.error import HTTPError
+from sys import argv
 
-if __name__ == "__main__":
+if __name__ == '__main__':
+    url = argv[1]
     try:
-        url = sys.argv[1]
-        with urllib.request.urlopen(url) as response:
-            print(response.read().decode('utf-8'))
-    except urllib.error.HTTPError as e:
-        print(f"Error code: {e.code}")
+        with urlopen(url) as response:
+            result = response.read().decode('utf-8')
+            print(result)
+    except HTTPError as e:
+        print('Error code:', e.code)
