@@ -1,11 +1,9 @@
 #!/usr/bin/python3
 """ module doc """
 import requests
-import sys
+from sys import argv
 
 if __name__ == "__main__":
-    url = sys.argv[1]
-    email = sys.argv[2]
-    params = {"email": email}
-    res = requests.post(url, data=params)
-    print(res.text)
+    parameters = {'email': argv[2]}
+    response = requests.post(url=argv[1], data=parameters)
+    print(response.text)
